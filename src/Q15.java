@@ -7,7 +7,6 @@ public class Q15 {
         String fileName = "test.txt";
         String dataToWrite = "this is a java program";
 
-        // Writing data to the file using FileOutputStream
         try (FileOutputStream fos = new FileOutputStream(fileName)) {
             fos.write(dataToWrite.getBytes());
             System.out.println("Data written to file successfully.");
@@ -15,7 +14,6 @@ public class Q15 {
             System.out.println("Error writing to file: " + e.getMessage());
         }
 
-        // Reading data from the file using FileInputStream
         try (FileInputStream fis = new FileInputStream(fileName)) {
             StringBuilder sb = new StringBuilder();
             int i;
